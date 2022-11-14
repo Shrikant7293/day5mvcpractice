@@ -1,0 +1,43 @@
+﻿@model List<Bright>
+
+
+<html>
+<head>
+	<title>Add Student</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>STUDENT ID</th>
+				<th>STUDENT NAME</th>
+				<th>STUDENT COURSE</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+
+			@{
+				foreach (Bright bright in Model)
+				{
+					<tr>
+						<td>@bright.Id</td>
+						<td>@bright.Name</td>
+						<td>@bright.Course</td>
+						<td><a href="/Bright/Delete/@bright.Id"><input type="button" value="Delete" class="btn btn-primary" /></a></td>
+						<td><a href="/Bright/Edit/@bright.Id"><input type="button" value="Edit" class="btn btn-primary" /></a></td>
+					</tr>
+				}
+			}
+		</tbody>
+
+	</table>
+	<br />
+
+	<a href="/Bright/Add"><input type="button" value="ADD NEW STUDENT" class="btn btn-primary" /></a>
+
+</body>
+</html>

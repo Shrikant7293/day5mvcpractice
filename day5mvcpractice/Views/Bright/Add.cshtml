@@ -1,0 +1,42 @@
+﻿@model Bright
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+
+			<form method="post" asp-controller="Bright" asp-action="Add">
+				<div class="col-lg-6 offset-3">
+
+					<div class="form-group">
+						<lable>	STUDENT ID : <input type="text" asp-for="@Model.Id" class="form-control" /></lable>
+					</div>
+
+					<br />
+
+					<div class="form-group">
+						<lable>STUDENT NAME : <input type="text" asp-for="@Model.Name" class="form-control" /></lable>
+					</div>
+
+					<br />
+					<div class="form-group">
+						<lable>STUDENT COURSE : <input type="text" asp-for="@Model.Course" class="form-control" /></lable>
+					</div>
+
+					<br />
+
+					<div class="form-group">
+					<a href="/Bright/Create"><input type="submit" value="Submit" class="btn btn-primary align-items-center"  /></a>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
