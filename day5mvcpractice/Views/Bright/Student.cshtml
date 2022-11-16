@@ -27,7 +27,7 @@
 						<td>@bright.Id</td>
 						<td>@bright.Name</td>
 						<td>@bright.Course</td>
-						<td><a href="/Bright/Delete/@bright.Id"><input type="button" value="Delete" class="btn btn-primary" /></a></td>
+						<td><a href="/Bright/Delete/@bright.Id"><input type="button" value="Delete" class="btn btn-primary" onclick="return confirm('Are You Sure You Want To Delete This');" /></a></td>
 						<td><a href="/Bright/Edit/@bright.Id"><input type="button" value="Edit" class="btn btn-primary" /></a></td>
 					</tr>
 				}

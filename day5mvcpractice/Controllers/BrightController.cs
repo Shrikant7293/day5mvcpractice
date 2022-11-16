@@ -36,16 +36,24 @@ namespace day5mvcpractice.Controllers
 
 		[HttpGet]
 
-		public IActionResult Edit()
+		public IActionResult Edit(int id)
 		{
-			return View();
+			Bright bright=Brights.FirstOrDefault(bright=>bright.Id==id);
+			return View(bright);
 		}
 
 		[HttpPost]
 
 		public IActionResult Edit(Bright bright)
 		{
-			return View();
+			Bright brightToUpdate = Brights.FirstOrDefault(b =>b.Id==bright.Id);
+
+			brightToUpdate.Id = bright.Id;
+			brightToUpdate.Name = bright.Name;
+			brightToUpdate.Course = bright.Course;
+
+
+			return RedirectToAction("Student");
 		}
 	}
 }
